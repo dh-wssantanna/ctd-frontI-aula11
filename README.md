@@ -44,11 +44,11 @@ Enviar os dados do formulário no corpo de uma requisição HTTP.
 ### `<label for="">`
 ```html
 <label for="nome">Nome completo</label>
-<input id="nome" name="nome" type="nome">
+<input id="nome" name="nome" type="text">
 ```
 **Nota:** Para associar a `label` ao `input` deve-se utilizar o atributo **id**. 
 ### `placeholder=""`
 ```html
 <label for="nome">Nome</label>
-<input id="nome" name="nome" type="nome" placeholder="Digite seu nome completo">
+<input id="nome" name="nome" type="text" placeholder="Digite seu nome completo">
 ```
