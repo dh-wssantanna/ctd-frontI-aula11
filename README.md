@@ -20,17 +20,35 @@ A princícpio não iremos aprofundar nossa abordagem sobre arquitetura de sistem
 </html>
 ```
 ### GET
-Enviar os dados do formulário no corpo de uma requisição HTTP.
-### POST
 Enviar os dados do formulário via URI, ou seja, os dados são enviados como parametro na URL.
+### POST
+Enviar os dados do formulário no corpo de uma requisição HTTP.
 ## Tipos de campos de formulário
 ### `<input>`
-### `<select>` `<option>`
+```
+<input name="nome" type="text">
+```
 ## Validações
-### required
-### type
+### `required`
+```
+<input name="cpf" type="text" required>
+```
+### `type=""`
+```
+<input name="nome" type="nome">
+<input name="email" type="email">
+<input name="telefone" type="tel">
+<input name="senha" type="password">
+```
 ## Semântica
 ### `<label for="">`
-### `<fieldset>`
-### `<legend>`
-### `<optgroups>`
+```
+<label for="nome">Nome completo</label>
+<input id="nome" name="nome" type="nome">
+```
+**Nota:** Para associar a `label` ao `input` deve-se utilizar o atributo **id**. 
+### `placeholder=""`
+```
+<label for="nome">Nome</label>
+<input id="nome" name="nome" type="nome" placeholder="Digite seu nome completo">
+```
