@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário 1/2</title>
+    <style type="text/css">
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        .conteudo {
+            border: 1px solid lightgray;
+            border-radius: 10px;
+            padding: 25px 25px;
+            margin: 100px auto;
+            max-width: 480px;
+        }
+
+        .conteudo__titulo {
+            font-size: 32px;
+        }
+
+        .formulario {
+            margin: 50px 0 0;
+        }
+
+        .formulario__grupo {
+            margin: 20px 0;
+        }
+
+        .formulario__rotulo {
+            display: block;
+            font-size: 18px;
+            font-weight: 700;
+            margin: 5px 0;
+        }
+
+        .formulario__campo {
+            border: 1px solid lightgray;
+            border-radius: 5px;
+            font-size: 18px;
+            padding: 10px 15px;
+            width: 100%;
+        }
+
+        .botao {
+            background-color: greenyellow;
+            border: none;
+            border-radius: 5px;
+            color: black;
+            font-size: 18px;
+            font-weight: 700;
+            padding: 10px 25px;
+            width: 100%;
+        }
+        
+    </style>
+</head>
+<body>
+    <!-- 
+        Qual é a diferença de tag(s) formulário
+        comparado com o que vimos até agora?
+
+        - Ponte de comunicação entre o usuário 
+        e o Sistema. - Alvez Jonathan.
+    -->
+
+    <!-- 
+        action: Para onde vão as informações.
+        Nota: O endereço do sistema são apelidados 
+        de endpoint.
+        
+        method: Como as informações serão enviadas.
+        GET - Enviar na URI da requisição HTTP.
+        POST - Enviar no corpo da requisição HTTP.
+    -->
+    <article class="conteudo">
+        <h1 class="conteudo__titulo">Inscreva-se</h1>
+        <form 
+            class="formulario"
+            action="https://api.sistema.com/cadastrar"
+            method="GET" 
+        >
+            <div class="formulario__grupo">
+                <label 
+                    class="formulario__rotulo" 
+                    for="nome"
+                >
+                    Nome completo
+                </label>
+                <input 
+                    class="formulario__campo"
+                    name="nome" 
+                    id="nome"
+                    type="text" 
+                    placeholder="Digite seu nome"
+                    required
+                >
+            </div>
+            <div class="formulario__grupo">
+                <label 
+                    class="formulario__rotulo" 
+                    for="nome"
+                >
+                    E-mail
+                </label>
+                <input 
+                    class="formulario__campo"
+                    name="email" 
+                    id="email"
+                    type="email" 
+                    placeholder="Digite seu e-mail"
+                    required
+                >
+            </div>
+            <div class="formulario__grupo">
+                <button class="botao" type="submit">Enviar</button>
+            </div>
+        </form>
+    </article>
+    
+
+</body>
+</html>
