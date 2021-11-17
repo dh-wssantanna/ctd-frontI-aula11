@@ -7,11 +7,186 @@
     <title>Mesa de trabalho</title>
     <style type="text/css">
         /* Adicione o código fonte de estilização */
+        
+        *{
+            font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+            box-sizing: border-box;
+            margin: 0px auto;
+        }
+        
+        form{
+            border-style: solid;
+            border-color: rgb(194, 194, 194);
+            border-radius: 5px;
+            width: 30% ;
+            padding: 15px;
+
+        }
+
+        h1{
+
+            margin-bottom: 25px;
+            
+        }
+
+        button{
+
+            width: 100%;
+            background-color: rgba(244,211,132,177);
+            border-radius: 5px;
+            padding: 10px 5px;
+            margin-bottom: 30px;
+        }
+
+        input{
+
+            border-radius: 4px;
+            width: 100%;
+            padding: 8px 4px;
+            margin-top: 5px ;
+            margin-bottom: 20px;
+        }
+
+       .logoAmazon{
+           text-align: center;
+       }
+
+       .senha_inf{
+          margin-bottom: 10px;
+       }
+
+       .senha, .email-celular, .nome{
+           font-weight: bold;
+       }
+
+       .fig , .senha_inf2{
+
+            float: left;
+            margin-bottom: 20px;
+            margin-left: 5px;
+
+       }
+
+      
+
+       .termo , .senha_inf2{
+
+        text-align: left;
+        font-size: 0.9rem;
+       
+       
+       }
+
+       .senha_inf2{
+
+        margin-right: 95px;
+       }
+
+       
+       .termo{
+
+        margin-bottom: 30px;
+       }
+
+       a{
+
+        text-decoration: none;
+        color: rgb(12, 58, 156);
+       }
+
+       .rodape{
+
+        margin-top: 30px;
+
+       }
+
+       .gradiente{
+
+            width: 100%;
+            height: 3px;
+            background-image: linear-gradient(to right, rgb(255, 255, 255),rgb(226, 226, 226),rgb(255, 255, 255));
+
+       }
+
+       
+
+       
+
 
     </style>
 </head>
 <body>
-    <!-- Adicione o código fonte da estrutura HTML -->
+
+    
+    <figure class="logoAmazon"> 
+        <img src="./imagens/logo-amazon.PNG">
+    </figure>
+    
+
+     
+    </div>
+    <form action="" method="get">
+        
+        <h1>Criar conta</h1>
+
+        <div class="nome">    
+            
+            <label for="nome">Seu nome</label><br>
+            <input type="text" name="nome" id="nome">
+            
+        </div>
+            
+        <div class="email-celular">    
+            
+            <label for="email-celular">Número de celular ou e-mail</label><br>
+            <input type="text" name="email-celular" id="email-celular">
+        </div>
+        
+        <div class="senha">    
+            
+            <label for="senha">Senha</label><br>
+            <input type="password" name="senha" id="senha" minlength="6" placeholder="Pelo menos 6 caracteres">
+        </div>    
+        
+        <div class="senha_inf">
+            <figure class="fig"> 
+                <img src="./imagens/icone.PNG">
+            </figure>
+            <p class="senha_inf2">As senhas devem ter pelo menos 6 caracteres.</p>
+        </div>
+        
+        
+        <div class="senha">    
+            
+            <label for="senha2">Insira a senha nova mais uma vez</label><br>   
+            <input type="password" name="nome" id="senha2">
+
+        </div>
+
+        <button type="submit">Continuar</button><br>
+
+        <div class="termo">
+            <p>
+                Ao criar uma conta, você concorda com as <a href="">Condições de Uso </a> da Amazon
+                Por favor verifique a <a href="">Notificação de Privacidade</a>, <a>Notificação de Cookies</a> e a 
+                <a href="">Notificação de Anúncios Baseados em Interesse</a>.
+            </p>
+
+        </div>   
+
+        <!-- <hr> -->
+        <div class="gradiente"></div>
+
+        <div>
+
+            <p class="rodape">
+                Você já tem uma conta? <a href="">Fazer Login</a>
+            </p>
+
+        </div>
+        
+    </form>
+    
 
 </body>
 </html>
