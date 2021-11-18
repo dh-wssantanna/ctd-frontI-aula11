@@ -6,12 +6,123 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mesa de trabalho</title>
     <style type="text/css">
+     @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,500;1,400&display=swap');
         /* Adicione o código fonte de estilização */
+            main{
+                font-family: 'Roboto', sans-serif;
+                position: relative;
+                margin: 40px;
+            }
 
+            .logo{
+            display: block;
+            margin-left: auto;
+            margin-right: auto;
+            }
+            
+
+            h1{
+        
+                font-size: 22px;
+            }
+
+            label{
+                display: block;
+                margin-top: 10px;
+                font-size: 13px;
+            }
+
+            form{
+                position: relative;
+                border: 2px solid rgb(218, 216, 216);
+                border-radius: 8px;
+                height: 520px;
+                width: 280px;
+                margin: 0 auto;
+                padding-left: 15px;
+            }
+
+            input{
+                width: 250px;
+                height: 20px;
+            }
+
+            button{
+                background-color: rgb(241, 204, 37);
+                width: 250px;
+                height: 25px;
+                border-radius: 5px;
+
+                margin-top: 15px;
+                margin-left: 5px;
+            }
+
+            section{
+                text-align: left;
+                font-size: 13px;
+            padding: 15px;
+                
+            }
+
+            hr{
+                border: 0;
+                height: 2px;
+                width: 70%;
+                background-image: linear-gradient(to right, transparent, rgb(187, 180, 180), transparent);
+            }
+
+            .linkLogin{
+                text-align: left;
+                font-size: 13px;
+                padding: 15px;
+
+            }
+
+            
+
+
+        
     </style>
 </head>
 <body>
     <!-- Adicione o código fonte da estrutura HTML -->
+<main>
+<figure>
+    <img class="logo" src="imagens/logo-amazon.PNG" alt="Logo da amazom">
+</figure>
 
+
+
+
+<form action="Cadastro" method="post">
+    <h1>Criar conta</h1>
+    <label for="nome">Seu nome</label>
+    <input type="text" name="nome" id="nome">
+
+    <label for="login">Número de celular ou e-mail</label>
+    <input type="text" name="login" id="login">
+    
+    <label for="senha">Senha</label>
+    <input type="password" name="senha" id="senha" placeholder="Pelomenos 6 caracteres" > 
+    <br>
+    <img  class="i" src="imagens/icone.PNG"  alt="Logo I">
+
+
+    <label for="senha">Insira a senha nova mais uma vez</label>
+    <input type="password" name="senha" id="senha">
+
+    <button>Continuar</button>
+
+    <section>
+        <p>Ao criar uma conta, você concorda com as Condições de Uso da Amazon.
+            Por favor verifique a Notificação de Privacidade, Notificação de Cokies e a Notificação de Anuncios Baseados em interesse. </p>
+    </section>
+    
+    <hr>
+    
+    <p class="linkLogin">Já tem uma conta? Fazer Login</p>
+</form>
+
+</main>
 </body>
 </html>
