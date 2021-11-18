@@ -25,16 +25,16 @@ Enviar os dados do formulário via URI, ou seja, os dados são enviados como par
 Enviar os dados do formulário no corpo de uma requisição HTTP.
 ## Tipos de campos de formulário
 ### `<input>`
-```
+```html
 <input name="nome" type="text">
 ```
 ## Validações
 ### `required`
-```
+```html
 <input name="cpf" type="text" required>
 ```
 ### `type=""`
-```
+```html
 <input name="nome" type="nome">
 <input name="email" type="email">
 <input name="telefone" type="tel">
@@ -42,13 +42,13 @@ Enviar os dados do formulário no corpo de uma requisição HTTP.
 ```
 ## Semântica
 ### `<label for="">`
-```
+```html
 <label for="nome">Nome completo</label>
-<input id="nome" name="nome" type="nome">
+<input id="nome" name="nome" type="text">
 ```
 **Nota:** Para associar a `label` ao `input` deve-se utilizar o atributo **id**. 
 ### `placeholder=""`
-```
+```html
 <label for="nome">Nome</label>
-<input id="nome" name="nome" type="nome" placeholder="Digite seu nome completo">
+<input id="nome" name="nome" type="text" placeholder="Digite seu nome completo">
 ```
