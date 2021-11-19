@@ -4,128 +4,144 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Formulário 1/2</title>
+    <title>Login Amazon</title>
     <style type="text/css">
-
-        * {
-            box-sizing: border-box;
+        /* Adicione o código fonte de estilização */
+        .form{
+            width: 350px;
+            margin-left: auto;
+            margin-right: auto;
+            border: solid rgb(202, 202, 202) 1px;
+            padding: 20px;
+            border-radius: 1%;
         }
 
-        body {
-            font-family: Arial, Helvetica, sans-serif;
+        .titulo{
+            margin-top: 0px;
         }
 
-        .conteudo {
-            border: 1px solid lightgray;
-            border-radius: 10px;
-            padding: 25px 25px;
-            margin: 100px auto;
-            max-width: 480px;
-        }
-
-        .conteudo__titulo {
-            font-size: 32px;
-        }
-
-        .formulario {
-            margin: 50px 0 0;
-        }
-
-        .formulario__grupo {
-            margin: 20px 0;
-        }
-
-        .formulario__rotulo {
+        .img{
             display: block;
-            font-size: 18px;
-            font-weight: 700;
-            margin: 5px 0;
+            margin-left: auto;
+            margin-right: auto;
+            margin-bottom: 10px;
         }
 
-        .formulario__campo {
-            border: 1px solid lightgray;
-            border-radius: 5px;
-            font-size: 18px;
-            padding: 10px 15px;
-            width: 100%;
+        .input{
+            width: 98%;
+            height: 27px;
         }
 
-        .botao {
-            background-color: greenyellow;
-            border: none;
-            border-radius: 5px;
-            color: black;
-            font-size: 18px;
-            font-weight: 700;
-            padding: 10px 25px;
-            width: 100%;
+        .dados{
+            margin-top: 17px;
         }
-        
+
+        .botão{
+            width: 100%;
+            height: 30px;
+            background-color: rgb(255, 178, 62);
+            margin-top: 17px;
+            border-radius: 4%;
+        }
+
+        .linha{
+            color:rgb(202, 202, 202) ;
+            width: 40%;
+            margin-top: 30px;
+            margin-bottom: 30px;
+        }
+
+        .img2{
+            margin-left: 0px;
+            margin-top: 10px;
+        }
+
+        .titulo2{
+            margin-top: 16px;
+            margin-left: 0px;
+            margin-right: 110px;
+            float: right;
+            font-weight: 400;
+            font-size: 12px;
+        }
+
+        .img3{
+            margin-top: 0px;
+            margin-left: 0px;
+            margin-right: 114px;
+            float: right;
+            margin-bottom: 20px;
+        }
+
+        .frase{
+            margin-right: 0px;
+            margin-bottom: 0px;
+            font-weight: 400;
+            font-size: 15px;
+        }
+
+        .ultimaDiv{
+            width: 350px;
+            height: 37.431px;
+        }
     </style>
 </head>
 <body>
-    <!-- 
-        Qual é a diferença de tag(s) formulário
-        comparado com o que vimos até agora?
+    <!-- Adicione o código fonte da estrutura HTML -->
+    <img src="./imagens/logo-amazon.PNG" alt="logo da amazon" class="img">
+    <form action="https://api.sistema.com/cadastrar" method="GET" class="form">
+        <h1 class="titulo">Criar conta</h1>
+        <div class=dados>
+            <label for="nome"> <strong>Seu nome</strong></label>
+            <input type="text" name="nome" id="nome" class="input">
+        </div>
 
-        - Ponte de comunicação entre o usuário 
-        e o Sistema. - Alvez Jonathan.
-    -->
+        <div class=dados>
+                <label for="email"> <strong>Número de celular ou e-mail</strong></label>
+            <input type="email" type="tel" name="email" id="email" class="input">
+        </div>
 
-    <!-- 
-        action: Para onde vão as informações.
-        Nota: O endereço do sistema são apelidados 
-        de endpoint.
-        
-        method: Como as informações serão enviadas.
-        GET - Enviar na URI da requisição HTTP.
-        POST - Enviar no corpo da requisição HTTP.
-    -->
-    <article class="conteudo">
-        <h1 class="conteudo__titulo">Inscreva-se</h1>
-        <form 
-            class="formulario"
-            action="https://api.sistema.com/cadastrar"
-            method="GET" 
-        >
-            <div class="formulario__grupo">
-                <label 
-                    class="formulario__rotulo" 
-                    for="nome"
-                >
-                    Nome completo
-                </label>
-                <input 
-                    class="formulario__campo"
-                    name="nome" 
-                    id="nome"
-                    type="text" 
-                    placeholder="Digite seu nome"
-                    required
-                >
-            </div>
-            <div class="formulario__grupo">
-                <label 
-                    class="formulario__rotulo" 
-                    for="nome"
-                >
-                    E-mail
-                </label>
-                <input 
-                    class="formulario__campo"
-                    name="email" 
-                    id="email"
-                    type="email" 
-                    placeholder="Digite seu e-mail"
-                    required
-                >
-            </div>
-            <div class="formulario__grupo">
-                <button class="botao" type="submit">Enviar</button>
-            </div>
-        </form>
-    </article>
-    
+        <div class=dados>
+                <label for="password"> <strong>Senha</strong></label>
+            <input type="password" placeholder="Pelo menos 6 caracteres" name="Senha" id="password" class="input">
+        </div>
 
+        <div class="exclamacao">
+            <img src="./imagens/icone.PNG" alt="exclamação" class="img2">
+            <h6 class="titulo2">As senhas devem ter pelo menos 6 caracteres.</h6>
+        </div>
+
+        <div class=dados>
+                <label for="password_new"> <strong>Insira a senha nova mais uma vez</strong></label>
+            <input type="password" placeholder="Pelo menos 6 caracteres" name="Nova senha" id="password_new" class="input">
+        </div>
+
+        <div>
+            <button type="submit" class="botão">Continuar</button>
+        </div>
+
+        <p>
+            Ao criar uma conta, você concorda com as <strong style="color: rgb(33, 174, 209);">Condições de Uso</strong> da Amazon. Por favor verifique a <strong style="color: rgb(33, 174, 209);">Notificação de Privacidade, Notificação de Cookies</strong> e a <strong style="color: rgb(33, 174, 209);">Notificação de Anúncios Baseados em Interesse.</strong> 
+        </p>
+
+        <hr class="linha">
+
+        <div class="ultimaDiv">
+            <img src="./imagens/icone2.PNG" alt="" class="img3">
+            <h6 class="frase">Você já tem uma conta? <strong>fazer login</strong></h6>
+        </div>
+
+    </form>
 </body>
 </html>
+
+
+<!--
+    Alunos: 
+    Alexandre de Oliveira
+    Bruno Lima
+    Felipe Lopes Torres
+    Jheniffer Farias
+    Lívia Maria
+    Lucas Ferreira
+-->
